@@ -167,6 +167,7 @@ public class MainActivity extends FragmentActivity {
         fragmentList.add(new OtherFragment());
 
          switchFragment(mContent,fragmentList.get(0));//默认显示第一个fragment
+        rbHome.setChecked(true);//设置第一按钮的选中状态
 
     }
 

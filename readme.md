@@ -1,3 +1,4 @@
+'
 Android 知识库
 
 <!-- MarkdownTOC -->
@@ -11,6 +12,10 @@ Android 知识库
             - [1. BaseFragment](#1-basefragment)
             - [2. 创建四个Fragment 继承baseFargment](#2-%E5%88%9B%E5%BB%BA%E5%9B%9B%E4%B8%AAfragment-%E7%BB%A7%E6%89%BFbasefargment)
         - [2.MainActivity 实现页面切换](#2mainactivity-%E5%AE%9E%E7%8E%B0%E9%A1%B5%E9%9D%A2%E5%88%87%E6%8D%A2)
+    - [3.首页Listview 设置adapter](#3%E9%A6%96%E9%A1%B5listview-%E8%AE%BE%E7%BD%AEadapter)
+        - [1.CommonFrameFragmentAdapter](#1commonframefragmentadapter)
+        - [2.CommonFrameFragment](#2commonframefragment)
+    - [4. 效果](#4-%E6%95%88%E6%9E%9C)
 
 <!-- /MarkdownTOC -->
 
@@ -227,6 +232,8 @@ Multi-line Code
         fragmentList.add(new OtherFragment());
 
          switchFragment(mContent,fragmentList.get(0));//默认显示第一个fragment
+        rbHome.setChecked(true);//设置第一按钮的选中状态
+
 
     }
     private void initView() {
@@ -236,6 +243,116 @@ Multi-line Code
 ```
 
 
+
+
+## 3.首页Listview 设置adapter
+### 1.CommonFrameFragmentAdapter
+
+
+```java
+
+public class CommonFrameFragmentAdapter extends BaseAdapter {
+
+
+    private final Context mContex;
+    private final String[] datas;
+
+    public CommonFrameFragmentAdapter(Context mContex, String[] datas) {
+        this.mContex = mContex;
+        this.datas = datas;
+    }
+
+    @Override
+    public int getCount() {
+        return datas.length;
+    }
+
+    @Override
+    public Object getItem(int i) {
+        return i;
+    }
+
+    @Override
+    public long getItemId(int i) {
+        return 0;
+    }
+
+    @Override
+    public View getView(int i, View view, ViewGroup viewGroup) {
+
+        TextView tv  = new TextView(mContex);
+        tv.setText(datas[i]);
+        tv.setTextSize(20);
+        tv.setTextColor(Color.BLACK);
+
+        tv.setPadding(10,5,10,5);
+
+        return tv;
+    }
+}
+
+```
+
+
+### 2.CommonFrameFragment
+
+```java
+
+public class CommonFrameFragment extends BaseFragment {
+
+    @BindView(R.id.lv_main_common)
+    ListView lvMainCommon;
+    Unbinder unbinder;
+
+
+
+    private String[] datas;
+
+
+    @Override
+    protected void initData() {
+        datas = new String[]{"OKHttp", "xUtils3", "Retrofit2", "Fresco", "Glide", "greenDao", "RxJava", "volley", "Gson", "FastJson", "picasso", "evenBus", "jcvideoplayer", "pulltorefresh", "Expandablelistview", "UniversalVideoView", "....."};
+
+        lvMainCommon.setAdapter(new CommonFrameFragmentAdapter(mContext,datas));
+        lvMainCommon.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+               // String content = ((TextView)view).getText().toString();
+                String text = datas[i];
+
+                Toast.makeText(mContext, text, Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    @Override
+    protected View initView() {
+
+        return null;
+    }
+
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        unbinder.unbind();
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        // TODO: inflate a fragment view
+        View view = View.inflate(mContext, R.layout.fragment_main_commonframe, null);
+
+        unbinder = ButterKnife.bind(this, view);
+        return view;
+    }
+}
+
+```
+
+## 4. 效果
+![Image Title](md_img/01_2fragment_layout.gif) 
 
 
 
