@@ -31,4 +31,5 @@ public class CustomFragment extends BaseFragment {
 
         return tv;
     }
+
 }

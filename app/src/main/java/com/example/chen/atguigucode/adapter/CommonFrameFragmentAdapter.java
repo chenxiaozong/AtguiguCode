@@ -1,4 +1,5 @@
-package com.example.chen.atguigucode.fragment.adapter;
+package com.example.chen.atguigucode.adapter;
+
 
 import android.content.Context;
 import android.graphics.Color;
@@ -14,7 +15,7 @@ import android.widget.TextView;
  *
  */
 
-public class CommonFrameFragmentAdapter extends BaseAdapter {
+public  class CommonFrameFragmentAdapter extends BaseAdapter {
 
 
     private final Context mContex;

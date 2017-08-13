@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.chen.atguigucode">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/atguigu_logo"
@@ -16,10 +20,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"
-            android:configChanges="orientation|screenSize|keyboardHidden"
-
-            ></activity>
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
+        <activity android:name=".okhttp.OkHttpActivity" />
+        <activity android:name=".okhttp.OkHttpUtilsActivity"></activity>
     </application>
 
 </manifest>
