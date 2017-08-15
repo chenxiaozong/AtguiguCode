@@ -1,1 +1,1 @@
-include ':app', ':okhttputils', ':sample-okhttp'
+include ':app', ':okhttputils', ':sample-okhttp', ':xutils', ':sample_xutil3'

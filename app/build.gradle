@@ -30,9 +30,33 @@ dependencies {
     //    compile files('lib/okio-1.13.0.jar')
     //使用okhttp-utils
     compile project(':okhttputils')
+    compile project(':xutils')
+    compile files('lib/gson-2.8.1.jar')
+    compile files('lib/fastjson-1.1.61.android.jar')
+    compile files('lib/afinal_0.5.1_bin.jar')
+    compile files('lib/volley.jar')
+    compile files('lib/eventbus-3.0.0.jar')
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.jakewharton:butterknife:8.8.1'
     testCompile 'junit:junit:4.12'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    compile files('lib/picasso-2.5.2.jar')
+
+
+    //------picaso图片转换---------
+    compile 'jp.wasabeef:picasso-transformations:2.1.0'
+    // If you want to use the GPU Filters
+    compile 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1'
+    //------picaso图片转换END---------
 }
+repositories {
+    jcenter()
+}
+
+
+//------picaso图片转换---------
+repositories {
+    jcenter()
+}
+//------picaso图片转换END---------

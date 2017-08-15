@@ -3,10 +3,10 @@
     package="com.example.chen.atguigucode">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
+        android:name=".AtguiguAppApplication"
         android:allowBackup="true"
         android:icon="@mipmap/atguigu_logo"
         android:label="@string/app_name"
@@ -24,7 +24,22 @@
             android:name=".MainActivity"
             android:configChanges="orientation|screenSize|keyboardHidden" />
         <activity android:name=".okhttp.OkHttpActivity" />
-        <activity android:name=".okhttp.OkHttpUtilsActivity"></activity>
+        <activity android:name=".okhttp.OkHttpUtilsActivity" />
+        <activity android:name=".okhttp.ImageListActivity" />
+        <activity android:name=".xtuils3.XUtilsActivity" />
+        <activity android:name=".xtuils3.net.XUtils3NetActivity" />
+        <activity android:name=".jsonnative.NativitJsonActivity" />
+        <activity android:name=".jsonnative.GsonParseActivity" />
+        <activity android:name=".jsonnative.FastJsonActivity" />
+        <activity android:name=".afinal.AfinalActivity" />
+        <activity android:name=".volley.VolleyActivity" />
+        <activity android:name=".envetbus.EventBusActivity" />
+        <activity android:name=".envetbus.EnvenBusSendActivity" />
+        <activity android:name=".butterknife.ButterKnifeActivity" />
+        <activity android:name=".imageloader.ImageLoaderActivity" />
+        <activity android:name=".picaso.PicasoActivity" />
+        <activity android:name=".picaso.PicasonListviewActivity" />
+        <activity android:name=".picaso.PicasoTranformationActivity"></activity>
     </application>
 
 </manifest>
