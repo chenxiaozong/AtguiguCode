@@ -39,7 +39,8 @@
         <activity android:name=".imageloader.ImageLoaderActivity" />
         <activity android:name=".picaso.PicasoActivity" />
         <activity android:name=".picaso.PicasonListviewActivity" />
-        <activity android:name=".picaso.PicasoTranformationActivity"></activity>
+        <activity android:name=".picaso.PicasoTranformationActivity" />
+        <activity android:name=".recycleview.RecycleViewActivity"></activity>
     </application>
 
 </manifest>

@@ -22,6 +22,7 @@ import com.example.chen.atguigucode.jsonnative.NativitJsonActivity;
 import com.example.chen.atguigucode.okhttp.OkHttpActivity;
 import com.example.chen.atguigucode.okhttp.OkHttpUtilsActivity;
 import com.example.chen.atguigucode.picaso.PicasoActivity;
+import com.example.chen.atguigucode.recycleview.RecycleViewActivity;
 import com.example.chen.atguigucode.volley.VolleyActivity;
 import com.example.chen.atguigucode.xtuils3.XUtilsActivity;
 
@@ -47,7 +48,7 @@ public class CommonFrameFragment extends BaseFragment {
     @Override
     protected void initData() {
         datas = new String[]{"OKHttp", "OKHttpUtils", "xUtils3", "NativeJson", "Gson", "FastJson", "Afinal","Volley",
-                "EvenBus","ButterKnife","ImageLoader","Picasso",
+                "EvenBus","ButterKnife","ImageLoader","Picasso","RecycleView",
                 "Retrofit2", "Fresco", "Glide", "greenDao", "RxJava",  "jcvideoplayer", "pulltorefresh", "Expandablelistview", "UniversalVideoView", "....."};
 
         ListAdapter adapter = new CommonFrameFragmentAdapter(mContext, datas);
@@ -130,6 +131,10 @@ public class CommonFrameFragment extends BaseFragment {
                 break;
             case "picasso": //Picasso
                 intent = new Intent(mContext, PicasoActivity.class);
+                startActivity(intent);
+                break;
+            case "recycleview": //RecycleView
+                intent = new Intent(mContext, RecycleViewActivity.class);
                 startActivity(intent);
                 break;
 
