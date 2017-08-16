@@ -40,7 +40,10 @@
         <activity android:name=".picaso.PicasoActivity" />
         <activity android:name=".picaso.PicasonListviewActivity" />
         <activity android:name=".picaso.PicasoTranformationActivity" />
-        <activity android:name=".recycleview.RecycleViewActivity"></activity>
+        <activity android:name=".recycleview.RecycleViewActivity" />
+        <activity android:name=".glide.GlideActivity" />
+        <activity android:name=".glide.GlideRecycleViewActivity" />
+        <activity android:name=".glide.GlideTransformActivity"></activity>
     </application>
 
 </manifest>

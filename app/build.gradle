@@ -40,16 +40,28 @@ dependencies {
     //------picaso图片转换---------
     // If you want to use the GPU Filters
     //------picaso图片转换END---------
+
+    //RecycleView
+
+    //glide
+    //v3
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.jakewharton:butterknife:8.8.1'
     compile 'jp.wasabeef:picasso-transformations:2.1.0'
     compile 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1'
+    compile 'com.android.support:recyclerview-v7:26.+'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
     testCompile 'junit:junit:4.12'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 
-    //RecycleView
-    compile 'com.android.support:recyclerview-v7:26.+'
+
+    //glide --图片变换
+    compile 'jp.wasabeef:glide-transformations:2.0.1'
+    // If you want to use the GPU Filters
+    compile 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1'
+
+
 }
 repositories {
     jcenter()
@@ -58,5 +70,7 @@ repositories {
 //------picaso图片转换---------
 repositories {
     jcenter()
+    mavenCentral()
 }
 //------picaso图片转换END---------
+

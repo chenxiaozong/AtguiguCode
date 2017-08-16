@@ -65,7 +65,7 @@ public class RecycleViewActivity extends Activity {
         public void handleMessage(Message msg) {
 
             switch (msg.what) {
-                case LOAD_JSON_SUCCESS:
+                case LOAD_JSON_SUCCESS: //加载json数据成功
                     //1. 得到json数据
                     jsonData = (String) msg.obj;
                     //2. 解析json数据
@@ -82,12 +82,14 @@ public class RecycleViewActivity extends Activity {
         }
     };
 
+
     /**
      * 为recycleview 设置适配器
      */
+    private MyRecycleViewAdapter adapter;
     private void setRecycleViewAdapter() {
 
-        MyRecycleViewAdapter adapter = new MyRecycleViewAdapter(list, RecycleViewActivity.this);
+        adapter = new MyRecycleViewAdapter(list, RecycleViewActivity.this);
         rvRecycler.setAdapter(adapter);
 
         //2. manager
@@ -97,10 +99,29 @@ public class RecycleViewActivity extends Activity {
         //rvRecycler.scrollToPosition(list.size()/2);
        // rvRecycler.smoothScrollToPosition(15);
 
+
+
+
+
+        //设置图片或文字监听
         adapter.setOnItemClickListener(new MyRecycleViewAdapter.OnItemClickListener() {
+
+
             @Override
             public void onItemClick(View view, String data, int position) {
-                Toast.makeText(mContext, position + data, Toast.LENGTH_SHORT).show();
+
+            }
+
+            @Override
+            public void onItemImageClick(View view, Trailer.TrailersBean data, int position) {
+
+                Toast.makeText(mContext, "image:" + position + ":" + data.toString(), Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onItemTextClick(View view, String data, int position) {
+                Toast.makeText(mContext, "text:" + position + ":" + data, Toast.LENGTH_SHORT).show();
+
             }
         });
 
@@ -215,11 +236,10 @@ public class RecycleViewActivity extends Activity {
     public void itemOnclick(View view) {
         switch (view.getId()) {
             case R.id.bt_recycle_add:
-                Toast.makeText(this, "add", Toast.LENGTH_SHORT).show();
-
+                addItem();
                 break;
             case R.id.bt_recycle_del:
-                Toast.makeText(this, "del", Toast.LENGTH_SHORT).show();
+                removeItem();
                 break;
             case R.id.bt_recycle_list:
                 rvRecycler.setLayoutManager(new LinearLayoutManager(mContext,LinearLayoutManager.VERTICAL,false));
@@ -234,6 +254,26 @@ public class RecycleViewActivity extends Activity {
         }
 
 
+    }
+
+    /**
+     * 从recycleview 中移除item
+     */
+    private void removeItem() {
+
+        adapter.removeItemData(0);
+        Toast.makeText(mContext, "remoe:0", Toast.LENGTH_SHORT).show();
+
+
+    }
+
+    /**
+     * 向recycleview 中添加 item
+     */
+    private void addItem() {
+        adapter.addItemData(0,null);
+
+        Toast.makeText(mContext, "add:0", Toast.LENGTH_SHORT).show();
     }
 
 }

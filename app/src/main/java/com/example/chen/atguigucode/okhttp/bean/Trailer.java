@@ -8,6 +8,7 @@ import java.util.List;
  */
 
 public class Trailer implements Serializable{
+
     private List<TrailersBean> trailers;
 
     public List<TrailersBean> getTrailers() {
@@ -167,5 +168,12 @@ public class Trailer implements Serializable{
                     ", type=" + type +
                     '}';
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Trailer{" +
+                "trailers=" + trailers +
+                '}';
     }
 }
