@@ -55,7 +55,8 @@
         <activity android:name=".fresco.activity.Fresco8Activity" />
         <activity android:name=".fresco.activity.Fresco9Activity" />
         <activity android:name=".fresco.activity.Fresco10Activity" />
-        <activity android:name=".universalvideoview.UniversalVideoViewActivity"></activity>
+        <activity android:name=".universalvideoview.UniversalVideoViewActivity" />
+        <activity android:name=".jiecao.JieCaoMainActivity"></activity>
     </application>
 
 </manifest>
