@@ -15,6 +15,7 @@ import com.example.chen.atguigucode.afinal.AfinalActivity;
 import com.example.chen.atguigucode.base.BaseFragment;
 import com.example.chen.atguigucode.butterknife.ButterKnifeActivity;
 import com.example.chen.atguigucode.envetbus.EventBusActivity;
+import com.example.chen.atguigucode.fresco.FrescoActivity;
 import com.example.chen.atguigucode.glide.GlideActivity;
 import com.example.chen.atguigucode.imageloader.ImageLoaderActivity;
 import com.example.chen.atguigucode.jsonnative.FastJsonActivity;
@@ -49,8 +50,8 @@ public class CommonFrameFragment extends BaseFragment {
     @Override
     protected void initData() {
         datas = new String[]{"OKHttp", "OKHttpUtils", "xUtils3", "NativeJson", "Gson", "FastJson", "Afinal","Volley",
-                "EvenBus","ButterKnife","ImageLoader","Picasso","RecycleView","Glide",
-                "Retrofit2", "Fresco", "greenDao", "RxJava",  "jcvideoplayer", "pulltorefresh", "Expandablelistview", "UniversalVideoView", "....."};
+                "EvenBus","ButterKnife","ImageLoader","Picasso","RecycleView","Glide","Fresco",
+                "Retrofit2",  "greenDao", "RxJava",  "jcvideoplayer", "pulltorefresh", "Expandablelistview", "UniversalVideoView", "....."};
 
         ListAdapter adapter = new CommonFrameFragmentAdapter(mContext, datas);
         lvMainCommon.setAdapter(adapter);
@@ -140,6 +141,10 @@ public class CommonFrameFragment extends BaseFragment {
                 break;
             case "glide": //Glide
                 intent = new Intent(mContext, GlideActivity.class);
+                startActivity(intent);
+                break;
+            case "fresco": //Fresco
+                intent = new Intent(mContext, FrescoActivity.class);
                 startActivity(intent);
                 break;
 

@@ -2,6 +2,8 @@ package com.example.chen.atguigucode;
 
 import android.app.Application;
 
+import com.facebook.drawee.backends.pipeline.Fresco;
+
 import org.xutils.x;
 
 /**
@@ -16,6 +18,10 @@ public class AtguiguAppApplication extends Application {
 
         //初始化xutils3
         x.Ext.init(this);
-        x.Ext.setDebug(true);// 开启debug会影响性能, 上线时关闭
+        x.Ext.setDebug(false);// 开启debug会影响性能, 上线时关闭
+
+
+
+        Fresco.initialize(this);
     }
 }
