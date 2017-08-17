@@ -2,6 +2,7 @@ package com.example.chen.atguigucode.fresco.activity;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.PointF;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -47,6 +48,7 @@ public class Fresco2Activity extends Activity {
     Button btFresco19none;
     private Context mContext;
     private GenericDraweeHierarchyBuilder builder;
+    private String desc;//描述
 
 
     @Override
@@ -76,6 +78,7 @@ public class Fresco2Activity extends Activity {
         //1. 地址
         url = "http://img.taopic.com/uploads/allimg/140113/318739-1401130R04688.jpg";
 
+        builder = new GenericDraweeHierarchyBuilder(getResources());
         //2.
         uri = Uri.parse(url);
 
@@ -99,45 +102,84 @@ public class Fresco2Activity extends Activity {
     public void itemOnclick(View view) {
         switch (view.getId()) {
             case R.id.bt_fresco1_1center :
-                tvFresco1Explain.setText(((Button)view).getText().toString());
+                tvFresco1Explain.setText(((Button)view).getText().toString()+"居中无缩放");
+
                 //中心裁剪
 
-
-                //3. 创建全局builder
-                builder = new GenericDraweeHierarchyBuilder(getResources());
-
-                //4. 样式
                 GenericDraweeHierarchy hierarchy =  builder.setActualImageScaleType(ScalingUtils.ScaleType.CENTER).build();
 
-                sdvFresco1Crop.setHierarchy(hierarchy);
                 sdvFresco1Crop.setHierarchy(hierarchy);
                 sdvFresco1Crop.setImageURI(uri);
 
 
                 break;
             case R.id.bt_fresco1_2centercrop :
-                tvFresco1Explain.setText(((Button)view).getText().toString());
+                 desc = "保持宽高比例放大或缩小,使两边都大于等于显示边界,居中显示";
+                tvFresco1Explain.setText(((Button)view).getText().toString()+":"+desc);
+                hierarchy = builder.setActualImageScaleType(ScalingUtils.ScaleType.CENTER_CROP).build();
+                sdvFresco1Crop.setHierarchy(hierarchy);
+                sdvFresco1Crop.setImageURI(uri);
+
                 break;
             case R.id.bt_fresco1_3focuscrop :
-                tvFresco1Explain.setText(((Button)view).getText().toString());
+                desc="根据指定坐标,居中";
+                PointF point = new PointF(0,0);
+
+                hierarchy =  builder.setActualImageScaleType(ScalingUtils.ScaleType.FOCUS_CROP).setActualImageFocusPoint(point).build();
+                sdvFresco1Crop.setHierarchy(hierarchy);
+                sdvFresco1Crop.setImageURI(uri);
+
                 break;
             case R.id.bt_fresco1_4centerinside :
-                tvFresco1Explain.setText(((Button)view).getText().toString());
+                desc="根据指定坐标,居中";
+                tvFresco1Explain.setText(((Button)view).getText().toString()+":"+desc);
+
+
+                hierarchy =  builder.setActualImageScaleType(ScalingUtils.ScaleType.CENTER_INSIDE).build();
+                sdvFresco1Crop.setHierarchy(hierarchy);
+                sdvFresco1Crop.setImageURI(uri);
+
+
                 break;
             case R.id.bt_fresco1_5fitcenter :
                 tvFresco1Explain.setText(((Button)view).getText().toString());
+                hierarchy = builder.setActualImageScaleType(ScalingUtils.ScaleType.FIT_CENTER).build();
+
+                sdvFresco1Crop.setHierarchy(hierarchy);
+                sdvFresco1Crop.setImageURI(uri);
+
+
                 break;
             case R.id.bt_fresco1_6fitstart :
                 tvFresco1Explain.setText(((Button)view).getText().toString());
+                hierarchy = builder.setActualImageScaleType(ScalingUtils.ScaleType.FIT_START).build();
+                sdvFresco1Crop.setHierarchy(hierarchy);
+                sdvFresco1Crop.setImageURI(uri);
+
+
                 break;
             case R.id.bt_fresco1_7fitend :
                 tvFresco1Explain.setText(((Button)view).getText().toString());
+                hierarchy = builder.setActualImageScaleType(ScalingUtils.ScaleType.FIT_END).build();
+
+                sdvFresco1Crop.setHierarchy(hierarchy);
+                sdvFresco1Crop.setImageURI(uri);
+
                 break;
             case R.id.bt_fresco1_8fitxy :
                 tvFresco1Explain.setText(((Button)view).getText().toString());
+                hierarchy = builder.setActualImageScaleType(ScalingUtils.ScaleType.FIT_XY).build();
+                sdvFresco1Crop.setHierarchy(hierarchy);
+                sdvFresco1Crop.setImageURI(uri);
+
                 break;
             case R.id.bt_fresco1_9none :
                 tvFresco1Explain.setText(((Button)view).getText().toString());
+
+                hierarchy = builder.setActualImageScaleType(null).build();
+                sdvFresco1Crop.setHierarchy(hierarchy);
+                sdvFresco1Crop.setImageURI(uri);
+
                 break;
         }
     }

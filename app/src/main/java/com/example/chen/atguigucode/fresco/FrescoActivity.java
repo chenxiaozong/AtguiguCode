@@ -96,22 +96,22 @@ public class FrescoActivity extends Activity {
 
 
                 break;
-            case R.id.bt_fresco_id2:
+            case R.id.bt_fresco_id2://图片剪裁
                 Log.d("FrescoActivity", ((TextView) view).getText().toString());
                 intent = new Intent(mContext, Fresco2Activity.class);
                 startActivity(intent);
                 break;
-            case R.id.bt_fresco_id3:
+            case R.id.bt_fresco_id3://3. 圆形圆角
                 Log.d("FrescoActivity", ((TextView) view).getText().toString());
                 intent = new Intent(mContext, Fresco3Activity.class);
                 startActivity(intent);
                 break;
-            case R.id.bt_fresco_id4:
+            case R.id.bt_fresco_id4://4. j渐进式展示图片
                 Log.d("FrescoActivity", ((TextView) view).getText().toString());
                 intent = new Intent(mContext, Fresco4Activity.class);
                 startActivity(intent);
                 break;
-            case R.id.bt_fresco_id5:
+            case R.id.bt_fresco_id5://5. gif动画
                 Log.d("FrescoActivity", ((TextView) view).getText().toString());
                 intent = new Intent(mContext, Fresco5Activity.class);
                 startActivity(intent);
