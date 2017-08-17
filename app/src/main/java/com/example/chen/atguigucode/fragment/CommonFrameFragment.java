@@ -18,6 +18,7 @@ import com.example.chen.atguigucode.envetbus.EventBusActivity;
 import com.example.chen.atguigucode.fresco.FrescoActivity;
 import com.example.chen.atguigucode.glide.GlideActivity;
 import com.example.chen.atguigucode.imageloader.ImageLoaderActivity;
+import com.example.chen.atguigucode.jiecao.JieCaoMainActivity;
 import com.example.chen.atguigucode.jsonnative.FastJsonActivity;
 import com.example.chen.atguigucode.jsonnative.GsonParseActivity;
 import com.example.chen.atguigucode.jsonnative.NativitJsonActivity;
@@ -52,7 +53,7 @@ public class CommonFrameFragment extends BaseFragment {
     protected void initData() {
         datas = new String[]{"OKHttp", "OKHttpUtils", "xUtils3", "NativeJson", "Gson", "FastJson", "Afinal","Volley",
                 "EvenBus","ButterKnife","ImageLoader","Picasso","RecycleView","Glide","Fresco","UniversalVideoView",
-                "Retrofit2",  "greenDao", "RxJava",  "jcvideoplayer", "pulltorefresh", "Expandablelistview",  "....."};
+                "JieCaoPlayer",  "greenDao", "RxJava",  "jcvideoplayer", "pulltorefresh", "Expandablelistview",  "....."};
 
         ListAdapter adapter = new CommonFrameFragmentAdapter(mContext, datas);
         lvMainCommon.setAdapter(adapter);
@@ -150,6 +151,10 @@ public class CommonFrameFragment extends BaseFragment {
                 break;
             case "universalvideoview": //UniversalVideoView
                 intent = new Intent(mContext, UniversalVideoViewActivity.class);
+                startActivity(intent);
+                break;
+            case "jiecaoplayer": //JieCaoPlayer
+                intent = new Intent(mContext, JieCaoMainActivity.class);
                 startActivity(intent);
                 break;
 
