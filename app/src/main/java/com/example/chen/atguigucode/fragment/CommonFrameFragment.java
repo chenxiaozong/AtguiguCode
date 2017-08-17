@@ -50,8 +50,8 @@ public class CommonFrameFragment extends BaseFragment {
     @Override
     protected void initData() {
         datas = new String[]{"OKHttp", "OKHttpUtils", "xUtils3", "NativeJson", "Gson", "FastJson", "Afinal","Volley",
-                "EvenBus","ButterKnife","ImageLoader","Picasso","RecycleView","Glide","Fresco",
-                "Retrofit2",  "greenDao", "RxJava",  "jcvideoplayer", "pulltorefresh", "Expandablelistview", "UniversalVideoView", "....."};
+                "EvenBus","ButterKnife","ImageLoader","Picasso","RecycleView","Glide","Fresco","UniversalVideoView",
+                "Retrofit2",  "greenDao", "RxJava",  "jcvideoplayer", "pulltorefresh", "Expandablelistview",  "....."};
 
         ListAdapter adapter = new CommonFrameFragmentAdapter(mContext, datas);
         lvMainCommon.setAdapter(adapter);
@@ -147,6 +147,7 @@ public class CommonFrameFragment extends BaseFragment {
                 intent = new Intent(mContext, FrescoActivity.class);
                 startActivity(intent);
                 break;
+
 
 
         }

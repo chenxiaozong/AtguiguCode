@@ -116,27 +116,27 @@ public class FrescoActivity extends Activity {
                 intent = new Intent(mContext, Fresco5Activity.class);
                 startActivity(intent);
                 break;
-            case R.id.bt_fresco_id6:
+            case R.id.bt_fresco_id6://6. 多图请求及图片复用
                 Log.d("FrescoActivity", ((TextView) view).getText().toString());
                 intent = new Intent(mContext, Fresco6Activity.class);
                 startActivity(intent);
                 break;
-            case R.id.bt_fresco_id7:
+            case R.id.bt_fresco_id7://7. 图片加载监听
                 intent = new Intent(mContext, Fresco7Activity.class);
                 startActivity(intent);
                 Log.d("FrescoActivity", ((TextView) view).getText().toString());
                 break;
-            case R.id.bt_fresco_id8:
+            case R.id.bt_fresco_id8://8.图片缩放和旋转
                 intent = new Intent(mContext, Fresco8Activity.class);
                 startActivity(intent);
                 Log.d("FrescoActivity", ((TextView) view).getText().toString());
                 break;
-            case R.id.bt_fresco_id9:
+            case R.id.bt_fresco_id9://9. 图片编辑
                 intent = new Intent(mContext, Fresco9Activity.class);
                 startActivity(intent);
                 Log.d("FrescoActivity", ((TextView) view).getText().toString());
                 break;
-            case R.id.bt_fresco_id10:
+            case R.id.bt_fresco_id10://10.动态添加图片
                 intent = new Intent(mContext, Fresco10Activity.class);
                 startActivity(intent);
                 Log.d("FrescoActivity", ((TextView) view).getText().toString());

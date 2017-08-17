@@ -45,16 +45,17 @@
         <activity android:name=".glide.GlideRecycleViewActivity" />
         <activity android:name=".glide.GlideTransformActivity" />
         <activity android:name=".fresco.FrescoActivity" />
-        <activity android:name=".fresco.activity.Fresco1Activity"></activity>
-        <activity android:name=".fresco.activity.Fresco2Activity"></activity>
-        <activity android:name=".fresco.activity.Fresco3Activity"></activity>
-        <activity android:name=".fresco.activity.Fresco4Activity"></activity>
-        <activity android:name=".fresco.activity.Fresco5Activity"></activity>
-        <activity android:name=".fresco.activity.Fresco6Activity"></activity>
-        <activity android:name=".fresco.activity.Fresco7Activity"></activity>
-        <activity android:name=".fresco.activity.Fresco8Activity"></activity>
-        <activity android:name=".fresco.activity.Fresco9Activity"></activity>
-        <activity android:name=".fresco.activity.Fresco10Activity"></activity>
+        <activity android:name=".fresco.activity.Fresco1Activity" />
+        <activity android:name=".fresco.activity.Fresco2Activity" />
+        <activity android:name=".fresco.activity.Fresco3Activity" />
+        <activity android:name=".fresco.activity.Fresco4Activity" />
+        <activity android:name=".fresco.activity.Fresco5Activity" />
+        <activity android:name=".fresco.activity.Fresco6Activity" />
+        <activity android:name=".fresco.activity.Fresco7Activity" />
+        <activity android:name=".fresco.activity.Fresco8Activity" />
+        <activity android:name=".fresco.activity.Fresco9Activity" />
+        <activity android:name=".fresco.activity.Fresco10Activity" />
+        <activity android:name=".universalvideoview.UniversalVideoViewActivity"></activity>
     </application>
 
 </manifest>

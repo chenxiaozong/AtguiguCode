@@ -3,72 +3,53 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context="com.example.chen.atguigucode.fresco.FrescoActivity">
 
     <include layout="@layout/title_bar"/>
 
 
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sdv_fresco_crop"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:background="@android:color/black"
+        fresco:placeholderImage="@drawable/atguigu_logo" />
+
 
     <Button
-        android:id="@+id/bt_fresco_id1"
+        android:id="@+id/bt_fresco8_scale"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="1.带进度条的图片" />
+        android:text="缩放图片" />
 
     <Button
-        android:id="@+id/bt_fresco_id2"
+        android:id="@+id/bt_fresco8_rot"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="2.图片的不同剪裁" />
+        android:text="旋转图片" />
 
-    <Button
-        android:id="@+id/bt_fresco_id3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="3.图形和圆角图片" />
 
-    <Button
-        android:id="@+id/bt_fresco_id4"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="4.渐进式展示图片" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/bt_fresco_id5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="5.Gif动画图片" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/darker_gray"
+            android:padding="3dp"
+            android:text="显示结果:" />
 
-    <Button
-        android:id="@+id/bt_fresco_id6"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="6.多图请求及图片复用" />
+        <TextView
+            android:id="@+id/tv_fresco8_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/bt_fresco_id7"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="7.图片加载监听" />
-
-    <Button
-        android:id="@+id/bt_fresco_id8"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="8.图片修改和旋转" />
-
-    <Button
-        android:id="@+id/bt_fresco_id9"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="9.修改图片" />
-
-    <Button
-        android:id="@+id/bt_fresco_id10"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="10.动态展示" />
 
 
 </LinearLayout>
