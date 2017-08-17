@@ -56,6 +56,10 @@ dependencies {
     compile 'com.facebook.fresco:imagepipeline-okhttp3:1.5.0+'
     testCompile 'junit:junit:4.12'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+
+    //videoview
+    compile 'com.linsea:universalvideoview:1.1.0@aar'
 }
 repositories {
     jcenter()

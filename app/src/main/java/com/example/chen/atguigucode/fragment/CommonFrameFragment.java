@@ -25,6 +25,7 @@ import com.example.chen.atguigucode.okhttp.OkHttpActivity;
 import com.example.chen.atguigucode.okhttp.OkHttpUtilsActivity;
 import com.example.chen.atguigucode.picaso.PicasoActivity;
 import com.example.chen.atguigucode.recycleview.RecycleViewActivity;
+import com.example.chen.atguigucode.universalvideoview.UniversalVideoViewActivity;
 import com.example.chen.atguigucode.volley.VolleyActivity;
 import com.example.chen.atguigucode.xtuils3.XUtilsActivity;
 
@@ -145,6 +146,10 @@ public class CommonFrameFragment extends BaseFragment {
                 break;
             case "fresco": //Fresco
                 intent = new Intent(mContext, FrescoActivity.class);
+                startActivity(intent);
+                break;
+            case "universalvideoview": //UniversalVideoView
+                intent = new Intent(mContext, UniversalVideoViewActivity.class);
                 startActivity(intent);
                 break;
 
