@@ -56,7 +56,70 @@
         <activity android:name=".fresco.activity.Fresco9Activity" />
         <activity android:name=".fresco.activity.Fresco10Activity" />
         <activity android:name=".universalvideoview.UniversalVideoViewActivity" />
-        <activity android:name=".jiecao.JieCaoMainActivity"></activity>
+        <activity android:name=".jiecao.JieCaoMainActivity" />
+        <activity
+            android:name=".jiecao.PlayDirectlyActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".jiecao.ListViewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".jiecao.ListViewNormalActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".jiecao.ListViewViewpagerActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".jiecao.ListViewMultiHolderActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".jiecao.ApiActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".jiecao.UISmallChangeActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".jiecao.UIBigChangeActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".jiecao.RecyclerViewNormalActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".jiecao.AutoTinyActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".jiecao.AutoTinyListActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".jiecao.AutoTinyNormalActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".jiecao.WebViewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".jiecao.OrientationActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="landscape" />
+        <activity android:name=".banner.BannerMainActivity" />
+
+
+
+        <activity android:name=".banner.demo.BannerLocalActivity"/>
+        <activity android:name=".banner.demo.CustomBannerActivity"/>
+        <activity android:name=".banner.demo.CustomViewPagerActivity"/>
     </application>
 
 </manifest>

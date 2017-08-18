@@ -19,7 +19,6 @@ public  class UiUtils {
     public static int px2dp(int px, Context context) {
         float density = context.getResources().getDisplayMetrics().density;
         return (int) (px / density + 0.5);//四舍五入
-
     }
 
 

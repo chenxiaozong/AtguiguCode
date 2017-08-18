@@ -12,6 +12,7 @@ import android.widget.ListView;
 import com.example.chen.atguigucode.R;
 import com.example.chen.atguigucode.adapter.CommonFrameFragmentAdapter;
 import com.example.chen.atguigucode.afinal.AfinalActivity;
+import com.example.chen.atguigucode.banner.BannerMainActivity;
 import com.example.chen.atguigucode.base.BaseFragment;
 import com.example.chen.atguigucode.butterknife.ButterKnifeActivity;
 import com.example.chen.atguigucode.envetbus.EventBusActivity;
@@ -53,7 +54,7 @@ public class CommonFrameFragment extends BaseFragment {
     protected void initData() {
         datas = new String[]{"OKHttp", "OKHttpUtils", "xUtils3", "NativeJson", "Gson", "FastJson", "Afinal","Volley",
                 "EvenBus","ButterKnife","ImageLoader","Picasso","RecycleView","Glide","Fresco","UniversalVideoView",
-                "JieCaoPlayer",  "greenDao", "RxJava",  "jcvideoplayer", "pulltorefresh", "Expandablelistview",  "....."};
+                "JieCaoPlayer", "Banner", "greenDao", "RxJava",  "jcvideoplayer", "pulltorefresh", "Expandablelistview",  "....."};
 
         ListAdapter adapter = new CommonFrameFragmentAdapter(mContext, datas);
         lvMainCommon.setAdapter(adapter);
@@ -155,6 +156,11 @@ public class CommonFrameFragment extends BaseFragment {
                 break;
             case "jiecaoplayer": //JieCaoPlayer
                 intent = new Intent(mContext, JieCaoMainActivity.class);
+                startActivity(intent);
+                break;
+
+            case "banner": //Banner
+                intent = new Intent(mContext, BannerMainActivity.class);
                 startActivity(intent);
                 break;
 

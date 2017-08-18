@@ -10,4 +10,18 @@
     <color name="uvv_light_gray">#ffF0F0F0</color>
     <color name="uvv_gray">#ffbbbbbb</color>
 
+
+
+
+
+    <color name="greenPrimary">@color/main_color</color>
+    <color name="greenPrimaryDark">@color/main_color</color>
+    <color name="greenAccent">@color/main_color</color>
+
+    <color name="recoveryColorPrimary">@color/main_color</color>
+    <color name="recoveryColorPrimaryDark">@color/main_color</color>
+    <color name="recoveryColorAccent">#BDBDBD</color>
+    <color name="recoveryTextColor">#FFFFFF</color>
+
+    <color name="main_color">#5CB85C</color>
 </resources>
