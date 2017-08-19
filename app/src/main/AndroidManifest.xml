@@ -121,9 +121,11 @@
         <activity android:name=".countdownview.activity.DynamicShowActivity" />
         <activity android:name=".countdownview.activity.ListViewActivity" />
         <activity android:name=".countdownview.activity.RecyclerViewActivity" />
-        <activity android:name=".opendanmaku.OpenDanmakuMainActivity"
-            android:configChanges="orientation|screenSize|keyboardHidden"
-            ></activity>
+        <activity
+            android:name=".opendanmaku.OpenDanmakuMainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
+        <activity android:name=".tablelayout.TablelayoutMainActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"></activity>
     </application>
 
 </manifest>

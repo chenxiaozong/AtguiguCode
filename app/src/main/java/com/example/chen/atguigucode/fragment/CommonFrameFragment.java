@@ -29,6 +29,7 @@ import com.example.chen.atguigucode.okhttp.OkHttpUtilsActivity;
 import com.example.chen.atguigucode.opendanmaku.OpenDanmakuMainActivity;
 import com.example.chen.atguigucode.picaso.PicasoActivity;
 import com.example.chen.atguigucode.recycleview.RecycleViewActivity;
+import com.example.chen.atguigucode.tablelayout.TablelayoutMainActivity;
 import com.example.chen.atguigucode.universalvideoview.UniversalVideoViewActivity;
 import com.example.chen.atguigucode.volley.VolleyActivity;
 import com.example.chen.atguigucode.xtuils3.XUtilsActivity;
@@ -56,7 +57,7 @@ public class CommonFrameFragment extends BaseFragment {
     protected void initData() {
         datas = new String[]{"OKHttp", "OKHttpUtils", "xUtils3", "NativeJson", "Gson", "FastJson", "Afinal","Volley",
                 "EvenBus","ButterKnife","ImageLoader","Picasso","RecycleView","Glide","Fresco","UniversalVideoView",
-                "JieCaoPlayer", "Banner","CountdownView","OpenDanmaku", "greenDao", "RxJava",  "jcvideoplayer", "pulltorefresh", "Expandablelistview",  "....."};
+                "JieCaoPlayer", "Banner","CountdownView","OpenDanmaku","TableLayout", "greenDao", "RxJava",  "jcvideoplayer", "pulltorefresh", "Expandablelistview",  "....."};
 
         ListAdapter adapter = new CommonFrameFragmentAdapter(mContext, datas);
         lvMainCommon.setAdapter(adapter);
@@ -171,6 +172,10 @@ public class CommonFrameFragment extends BaseFragment {
                 break;
             case "opendanmaku": //OpenDanmaku--弹幕
                 intent = new Intent(mContext, OpenDanmakuMainActivity.class);
+                startActivity(intent);
+                break;
+            case "tablelayout": //TableLayout--Viewpager
+                intent = new Intent(mContext, TablelayoutMainActivity.class);
                 startActivity(intent);
                 break;
 
