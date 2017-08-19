@@ -114,12 +114,16 @@
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="landscape" />
         <activity android:name=".banner.BannerMainActivity" />
-
-
-
-        <activity android:name=".banner.demo.BannerLocalActivity"/>
-        <activity android:name=".banner.demo.CustomBannerActivity"/>
-        <activity android:name=".banner.demo.CustomViewPagerActivity"/>
+        <activity android:name=".banner.demo.BannerLocalActivity" />
+        <activity android:name=".banner.demo.CustomBannerActivity" />
+        <activity android:name=".banner.demo.CustomViewPagerActivity" />
+        <activity android:name=".countdownview.CountdownViewMainActivity" />
+        <activity android:name=".countdownview.activity.DynamicShowActivity" />
+        <activity android:name=".countdownview.activity.ListViewActivity" />
+        <activity android:name=".countdownview.activity.RecyclerViewActivity" />
+        <activity android:name=".opendanmaku.OpenDanmakuMainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            ></activity>
     </application>
 
 </manifest>

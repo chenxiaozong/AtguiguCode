@@ -187,7 +187,6 @@ public class AfinalActivity extends AppCompatActivity {
             @Override
             public void onStart() {
                 tvAfinalInfo.setText("onStart");
-
             }
 
             @Override

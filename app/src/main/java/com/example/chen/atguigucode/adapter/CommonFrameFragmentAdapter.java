@@ -8,14 +8,18 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import com.example.chen.atguigucode.R;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 /**
  * Created by chen on 2017/8/13.
- *
+ * <p>
  * 常用框架页面的adapter
- *
  */
 
-public  class CommonFrameFragmentAdapter extends BaseAdapter {
+public class CommonFrameFragmentAdapter extends BaseAdapter {
 
 
     private final Context mContex;
@@ -43,14 +47,38 @@ public  class CommonFrameFragmentAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
+        ViewHolder viewHolder;
 
-        TextView tv  = new TextView(mContex);
-        tv.setText(datas[i]);
-        tv.setTextSize(20);
-        tv.setTextColor(Color.BLACK);
+        if (view == null) {
+             view = View.inflate(mContex, R.layout.item_commonfragment_list_textview, null);
 
-        tv.setPadding(10,5,10,5);
+            viewHolder = new ViewHolder(view);
+            view.setTag(viewHolder);
 
-        return tv;
+        }else {
+            viewHolder = (ViewHolder) view.getTag();
+
+        }
+
+        viewHolder.textview.setText(datas[i]);
+
+
+        if(i%2==1) {
+            viewHolder.textview.setBackgroundColor(Color.parseColor("#f5f5f5"));
+        }else {
+            viewHolder.textview.setBackgroundColor(Color.WHITE);
+
+        }
+
+        return view;
+    }
+
+    static class ViewHolder {
+        @BindView(R.id.textview)
+        TextView textview;
+
+        ViewHolder(View view) {
+            ButterKnife.bind(this, view);
+        }
     }
 }

@@ -15,6 +15,7 @@ import com.example.chen.atguigucode.afinal.AfinalActivity;
 import com.example.chen.atguigucode.banner.BannerMainActivity;
 import com.example.chen.atguigucode.base.BaseFragment;
 import com.example.chen.atguigucode.butterknife.ButterKnifeActivity;
+import com.example.chen.atguigucode.countdownview.CountdownViewMainActivity;
 import com.example.chen.atguigucode.envetbus.EventBusActivity;
 import com.example.chen.atguigucode.fresco.FrescoActivity;
 import com.example.chen.atguigucode.glide.GlideActivity;
@@ -25,6 +26,7 @@ import com.example.chen.atguigucode.jsonnative.GsonParseActivity;
 import com.example.chen.atguigucode.jsonnative.NativitJsonActivity;
 import com.example.chen.atguigucode.okhttp.OkHttpActivity;
 import com.example.chen.atguigucode.okhttp.OkHttpUtilsActivity;
+import com.example.chen.atguigucode.opendanmaku.OpenDanmakuMainActivity;
 import com.example.chen.atguigucode.picaso.PicasoActivity;
 import com.example.chen.atguigucode.recycleview.RecycleViewActivity;
 import com.example.chen.atguigucode.universalvideoview.UniversalVideoViewActivity;
@@ -54,7 +56,7 @@ public class CommonFrameFragment extends BaseFragment {
     protected void initData() {
         datas = new String[]{"OKHttp", "OKHttpUtils", "xUtils3", "NativeJson", "Gson", "FastJson", "Afinal","Volley",
                 "EvenBus","ButterKnife","ImageLoader","Picasso","RecycleView","Glide","Fresco","UniversalVideoView",
-                "JieCaoPlayer", "Banner", "greenDao", "RxJava",  "jcvideoplayer", "pulltorefresh", "Expandablelistview",  "....."};
+                "JieCaoPlayer", "Banner","CountdownView","OpenDanmaku", "greenDao", "RxJava",  "jcvideoplayer", "pulltorefresh", "Expandablelistview",  "....."};
 
         ListAdapter adapter = new CommonFrameFragmentAdapter(mContext, datas);
         lvMainCommon.setAdapter(adapter);
@@ -161,6 +163,14 @@ public class CommonFrameFragment extends BaseFragment {
 
             case "banner": //Banner
                 intent = new Intent(mContext, BannerMainActivity.class);
+                startActivity(intent);
+                break;
+            case "countdownview": //CountdownView--倒计时秒杀
+                intent = new Intent(mContext, CountdownViewMainActivity.class);
+                startActivity(intent);
+                break;
+            case "opendanmaku": //OpenDanmaku--弹幕
+                intent = new Intent(mContext, OpenDanmakuMainActivity.class);
                 startActivity(intent);
                 break;
 
