@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.chen.atguigucode.banner.item.BannerStyleActivity">
+    tools:context=".commom.banner.item.BannerStyleActivity">
 
 <include layout="@layout/title_bar"/>
     <com.youth.banner.Banner

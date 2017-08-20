@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.chen.atguigucode.picaso.PicasoActivity">
+    tools:context=".commom.picaso.PicasoActivity">
 
 
     <include layout="@layout/title_bar" />

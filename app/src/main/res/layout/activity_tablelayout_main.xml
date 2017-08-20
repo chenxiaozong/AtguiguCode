@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context="com.example.chen.atguigucode.tablelayout.TablelayoutMainActivity">
+    tools:context=".commom.tablelayout.TablelayoutMainActivity">
 
     <include layout="@layout/title_bar"></include>
 

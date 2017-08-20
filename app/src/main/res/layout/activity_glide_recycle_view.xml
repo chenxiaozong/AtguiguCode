@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context="com.example.chen.atguigucode.glide.GlideRecycleViewActivity">
+    tools:context=".commom.glide.GlideRecycleViewActivity">
 
 
     <include layout="@layout/title_bar"/>

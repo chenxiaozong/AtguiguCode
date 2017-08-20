@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
 
     android:orientation="vertical"
-    tools:context="com.example.chen.atguigucode.countdownview.activity.DynamicShowActivity">
+    tools:context=".commom.countdownview.activity.DynamicShowActivity">
 
 
 

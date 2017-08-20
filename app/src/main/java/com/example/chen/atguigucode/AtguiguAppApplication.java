@@ -5,7 +5,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.example.chen.atguigucode.okhttp.bean.Trailer;
+import com.example.chen.atguigucode.commom.okhttp.bean.Trailer;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;

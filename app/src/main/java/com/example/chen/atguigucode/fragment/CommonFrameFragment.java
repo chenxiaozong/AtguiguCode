@@ -11,29 +11,29 @@ import android.widget.ListView;
 
 import com.example.chen.atguigucode.R;
 import com.example.chen.atguigucode.adapter.CommonFrameFragmentAdapter;
-import com.example.chen.atguigucode.afinal.AfinalActivity;
-import com.example.chen.atguigucode.asynchttp.AsyncHttpActivity;
-import com.example.chen.atguigucode.banner.BannerMainActivity;
+import com.example.chen.atguigucode.commom.afinal.AfinalActivity;
+import com.example.chen.atguigucode.commom.asynchttp.AsyncHttpActivity;
+import com.example.chen.atguigucode.commom.banner.BannerMainActivity;
 import com.example.chen.atguigucode.base.BaseFragment;
-import com.example.chen.atguigucode.butterknife.ButterKnifeActivity;
-import com.example.chen.atguigucode.countdownview.CountdownViewMainActivity;
-import com.example.chen.atguigucode.envetbus.EventBusActivity;
-import com.example.chen.atguigucode.fresco.FrescoActivity;
-import com.example.chen.atguigucode.glide.GlideActivity;
-import com.example.chen.atguigucode.imageloader.ImageLoaderActivity;
-import com.example.chen.atguigucode.jiecao.JieCaoMainActivity;
-import com.example.chen.atguigucode.jsonnative.FastJsonActivity;
-import com.example.chen.atguigucode.jsonnative.GsonParseActivity;
-import com.example.chen.atguigucode.jsonnative.NativitJsonActivity;
-import com.example.chen.atguigucode.okhttp.OkHttpActivity;
-import com.example.chen.atguigucode.okhttp.OkHttpUtilsActivity;
-import com.example.chen.atguigucode.opendanmaku.OpenDanmakuMainActivity;
-import com.example.chen.atguigucode.picaso.PicasoActivity;
-import com.example.chen.atguigucode.recycleview.RecycleViewActivity;
-import com.example.chen.atguigucode.tablelayout.TablelayoutMainActivity;
-import com.example.chen.atguigucode.universalvideoview.UniversalVideoViewActivity;
-import com.example.chen.atguigucode.volley.VolleyActivity;
-import com.example.chen.atguigucode.xtuils3.XUtilsActivity;
+import com.example.chen.atguigucode.commom.butterknife.ButterKnifeActivity;
+import com.example.chen.atguigucode.commom.countdownview.CountdownViewMainActivity;
+import com.example.chen.atguigucode.commom.envetbus.EventBusActivity;
+import com.example.chen.atguigucode.commom.fresco.FrescoActivity;
+import com.example.chen.atguigucode.commom.glide.GlideActivity;
+import com.example.chen.atguigucode.commom.imageloader.ImageLoaderActivity;
+import com.example.chen.atguigucode.commom.jiecao.JieCaoMainActivity;
+import com.example.chen.atguigucode.commom.jsonnative.FastJsonActivity;
+import com.example.chen.atguigucode.commom.jsonnative.GsonParseActivity;
+import com.example.chen.atguigucode.commom.jsonnative.NativitJsonActivity;
+import com.example.chen.atguigucode.commom.okhttp.OkHttpActivity;
+import com.example.chen.atguigucode.commom.okhttp.OkHttpUtilsActivity;
+import com.example.chen.atguigucode.commom.opendanmaku.OpenDanmakuMainActivity;
+import com.example.chen.atguigucode.commom.picaso.PicasoActivity;
+import com.example.chen.atguigucode.commom.recycleview.RecycleViewActivity;
+import com.example.chen.atguigucode.commom.tablelayout.TablelayoutMainActivity;
+import com.example.chen.atguigucode.commom.universalvideoview.UniversalVideoViewActivity;
+import com.example.chen.atguigucode.commom.volley.VolleyActivity;
+import com.example.chen.atguigucode.commom.xtuils3.XUtilsActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -56,9 +56,9 @@ public class CommonFrameFragment extends BaseFragment {
 
     @Override
     protected void initData() {
-        datas = new String[]{"AsyncHttp","OKHttp", "OKHttpUtils", "xUtils3", "NativeJson", "Gson", "FastJson", "Afinal","Volley",
-                "EvenBus","ButterKnife","ImageLoader","Picasso","RecycleView","Glide","Fresco","UniversalVideoView",
-                "JieCaoPlayer", "Banner","CountdownView","OpenDanmaku","TableLayout", "greenDao", "RxJava",  "jcvideoplayer", "pulltorefresh", "Expandablelistview",  "....."};
+        datas = new String[]{"AsyncHttp", "OKHttp", "OKHttpUtils", "xUtils3", "NativeJson", "Gson", "FastJson", "Afinal", "Volley",
+                "EvenBus", "ButterKnife", "ImageLoader", "Picasso", "RecycleView", "Glide", "Fresco", "UniversalVideoView",
+                "JieCaoPlayer", "Banner", "CountdownView", "OpenDanmaku", "TableLayout", "greenDao", "RxJava", "jcvideoplayer", "pulltorefresh", "Expandablelistview", "....."};
 
         ListAdapter adapter = new CommonFrameFragmentAdapter(mContext, datas);
         lvMainCommon.setAdapter(adapter);
@@ -87,7 +87,7 @@ public class CommonFrameFragment extends BaseFragment {
         switch (text.toLowerCase()) {
             case "asynchttp"://AsyncHttp
 
-                 Intent intent = new Intent(mContext, AsyncHttpActivity.class);
+                Intent intent = new Intent(mContext, AsyncHttpActivity.class);
                 startActivity(intent);
                 break;
             case "okhttp":
@@ -184,7 +184,6 @@ public class CommonFrameFragment extends BaseFragment {
                 intent = new Intent(mContext, TablelayoutMainActivity.class);
                 startActivity(intent);
                 break;
-
 
 
         }
