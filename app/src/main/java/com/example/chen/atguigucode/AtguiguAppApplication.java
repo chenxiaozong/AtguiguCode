@@ -184,13 +184,18 @@ public class AtguiguAppApplication extends Application {
             return;
         }
 
+
+//使用fastJson解析
+//        Trailer trailer = JSON.parseObject(jsonData, Trailer.class);
+//        Log.d("RecycleViewActivity", "trailer:" + trailer);
+//
+//        List<Trailer.TrailersBean> trailers = trailer.getTrailers();
+//        Log.d("RecycleViewActivity", trailers.toString());
+//
+
         //1. 使用Gson解析
-
-//        JsonObject jsonObj = new JsonParser().parse(jsonStr).getAsJsonObject();
-//        Trailer trailer = new Gson().fromJson(jsonObj, Trailer.class);
-
-
         JsonObject jsonObj = new JsonParser().parse(jsonStr).getAsJsonObject();
+
         trailer = new Gson().fromJson(jsonObj, Trailer.class);
 
         Log.d("AtguiguAppApplication", "gosn:"+"trailer:" + trailer);

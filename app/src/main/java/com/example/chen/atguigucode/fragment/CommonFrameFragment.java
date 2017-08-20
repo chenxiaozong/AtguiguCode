@@ -12,6 +12,7 @@ import android.widget.ListView;
 import com.example.chen.atguigucode.R;
 import com.example.chen.atguigucode.adapter.CommonFrameFragmentAdapter;
 import com.example.chen.atguigucode.afinal.AfinalActivity;
+import com.example.chen.atguigucode.asynchttp.AsyncHttpActivity;
 import com.example.chen.atguigucode.banner.BannerMainActivity;
 import com.example.chen.atguigucode.base.BaseFragment;
 import com.example.chen.atguigucode.butterknife.ButterKnifeActivity;
@@ -55,7 +56,7 @@ public class CommonFrameFragment extends BaseFragment {
 
     @Override
     protected void initData() {
-        datas = new String[]{"OKHttp", "OKHttpUtils", "xUtils3", "NativeJson", "Gson", "FastJson", "Afinal","Volley",
+        datas = new String[]{"AsyncHttp","OKHttp", "OKHttpUtils", "xUtils3", "NativeJson", "Gson", "FastJson", "Afinal","Volley",
                 "EvenBus","ButterKnife","ImageLoader","Picasso","RecycleView","Glide","Fresco","UniversalVideoView",
                 "JieCaoPlayer", "Banner","CountdownView","OpenDanmaku","TableLayout", "greenDao", "RxJava",  "jcvideoplayer", "pulltorefresh", "Expandablelistview",  "....."};
 
@@ -84,9 +85,14 @@ public class CommonFrameFragment extends BaseFragment {
      */
     private void switchToActivity(String text) {
         switch (text.toLowerCase()) {
+            case "asynchttp"://AsyncHttp
+
+                 Intent intent = new Intent(mContext, AsyncHttpActivity.class);
+                startActivity(intent);
+                break;
             case "okhttp":
 
-                Intent intent = new Intent(mContext, OkHttpActivity.class);
+                intent = new Intent(mContext, OkHttpActivity.class);
                 startActivity(intent);
                 break;
             case "okhttputils":

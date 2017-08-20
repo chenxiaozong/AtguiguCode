@@ -124,8 +124,10 @@
         <activity
             android:name=".opendanmaku.OpenDanmakuMainActivity"
             android:configChanges="orientation|screenSize|keyboardHidden" />
-        <activity android:name=".tablelayout.TablelayoutMainActivity"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"></activity>
+        <activity
+            android:name=".tablelayout.TablelayoutMainActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity android:name=".asynchttp.AsyncHttpActivity"></activity>
     </application>
 
 </manifest>
